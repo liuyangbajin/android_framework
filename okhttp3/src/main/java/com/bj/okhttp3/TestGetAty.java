@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.zhouyou.http.interceptor.GzipRequestInterceptor;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 

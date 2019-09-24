@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.bj.okhttp3.utils.ApiUtils;
 import com.bj.okhttp3.utils.MediaTypeUtils;
 import com.google.gson.Gson;
+import com.zhouyou.http.interceptor.GzipRequestInterceptor;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -40,6 +41,7 @@ public class TestPostAty extends Activity {
 
         // 创建实例
         OkHttpClient okhttp = new OkHttpClient.Builder()
+//                .addInterceptor(new GzipRequestInterceptor()) // gzip压缩，需要服务器支持
                 .build();
 
         // 创建表单及数据
