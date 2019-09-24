@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_get"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Get获取网页数据" />
+
+    <Button
+        android:id="@+id/btn_post"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="post获取服务端数据" />
+
+    <Button
+        android:id="@+id/btn_post_upload"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="上传文件" />
+
+    <Button
+        android:id="@+id/btn_post_download"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="下载文件" />
+</LinearLayout>
