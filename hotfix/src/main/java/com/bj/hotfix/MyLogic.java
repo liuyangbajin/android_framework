@@ -4,6 +4,6 @@ public class MyLogic {
 
     public String toMsg(){
 
-        return "老板是傻X";
+        return "老板很抠门";
     }
 }
