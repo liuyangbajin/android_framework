@@ -7,6 +7,7 @@ import android.widget.TextView;
 import com.zhouyou.http.interceptor.GzipRequestInterceptor;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
@@ -37,7 +38,7 @@ public class TestGetAty extends Activity {
      * */
     private void doGet() {
 
-        OkHttpClient mClient =new OkHttpClient.Builder() // 构建者模式，创建实例
+        OkHttpClient mClient = new OkHttpClient.Builder() // 构建者模式，创建实例
                 .connectTimeout(20, TimeUnit.SECONDS) // 设置连接超时时间
                 .build();
 
@@ -72,3 +73,4 @@ public class TestGetAty extends Activity {
         });
     }
 }
+

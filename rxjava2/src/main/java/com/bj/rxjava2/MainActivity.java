@@ -524,7 +524,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * concatArray() :  与 concat() 作用一样，不过 concatArray() 可以发送多于 4 个被观察者。
+     * concatArray(): 与 concat() 作用一样，不过 concatArray() 可以发送多于 4 个被观察者。
      * */
     private void concatArray(){
 
