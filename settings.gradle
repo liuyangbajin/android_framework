@@ -1,1 +1,1 @@
-include ':app', ':okhttp3', ':rxjava2', ':threadpool', ':eventbus3', ':glide', ':blockcanary', ':hotfix'
+include ':app', ':okhttp3', ':rxjava2', ':threadpool', ':blockcanary', ':hotfix'
