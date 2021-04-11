@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_home"
+    app:startDestination="@id/loginFrag">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.bj.jetpack_navigation.MainActivity"
+        android:label="aty_main"
+        tools:layout="@layout/aty_main" />
+
+    <fragment
+        android:id="@+id/loginFrag"
+        android:name="com.bj.jetpack_navigation.LoginFrag"
+        android:label="frag_login"
+        tools:layout="@layout/frag_login" >
+        <action
+            android:id="@+id/action_loginFrag_to_mainActivity"
+            app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_loginFrag_to_settingFrag"
+            app:destination="@id/settingFrag" />
+        <action
+            android:id="@+id/action_loginFrag_to_mainActivity2"
+            app:destination="@id/mainActivity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFrag"
+        android:name="com.bj.jetpack_navigation.HomeFrag"
+        android:label="frag_home"
+        tools:layout="@layout/frag_home" />
+    <fragment
+        android:id="@+id/settingFrag"
+        android:name="com.bj.jetpack_navigation.SettingFrag"
+        android:label="frag_setting"
+        tools:layout="@layout/frag_setting" >
+        <action
+            android:id="@+id/action_settingFrag_to_homeFrag"
+            app:destination="@id/homeFrag" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="com.bj.jetpack_navigation.MainActivity"
+        android:label="aty_main"
+        tools:layout="@layout/aty_main" />
+</navigation>

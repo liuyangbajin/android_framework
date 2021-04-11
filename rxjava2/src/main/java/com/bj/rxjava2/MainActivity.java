@@ -373,7 +373,12 @@ public class MainActivity extends AppCompatActivity {
                         }
                         return Observable.just("我爱"+s);
                     }
-                })
+                }).flatMap(new Function<String, ObservableSource<?>>() {
+            @Override
+            public ObservableSource<?> apply(String s) throws Exception {
+                return null;
+            }
+        })
                 .subscribe(new Consumer<String>() {
 
                     @Override

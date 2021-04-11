@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.bj.databinding.model.User" />
+        <import type="com.bj.databinding.model.Goods" />
+        <import type="com.bj.databinding.StringUtils" />
+
+        <variable
+            name="userInfo"
+            type="User" />
+
+        <variable
+            name="goodInfo"
+            type="Goods" />
+
+        <variable
+            name="aty"
+            type="com.bj.databinding.MainActivity" />
+
+        <variable
+            name="utils"
+            type="StringUtils" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:textSize="18sp"
+            android:textColor="#666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{userInfo.name, default=我是默认用户名}"/>
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:textSize="18sp"
+            android:textColor="#666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{userInfo.password, default=我是默认密码}"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#939393"/>
+
+        <TextView
+            android:textSize="18sp"
+            android:textColor="#666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{goodInfo.name, default=我是商品名字}"/>
+
+        <TextView
+            android:textSize="18sp"
+            android:textColor="#666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{goodInfo.details, default=我是商品描述}"/>
+
+
+        <TextView
+            android:textSize="18sp"
+            android:textColor="#666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(goodInfo.price), default=我是商品价格}"/>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改单个属性"/>
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改全部属性"/>
+
+
+        <TextView
+            android:textSize="18sp"
+            android:textColor="#666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{aty.msg01}"/>
+
+        <EditText
+            android:textSize="18sp"
+            android:textColor="#666666"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="@={aty.msg02}"/>
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>

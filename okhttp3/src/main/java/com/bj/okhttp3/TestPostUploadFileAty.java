@@ -1,18 +1,12 @@
 package com.bj.okhttp3;
 
 
-import android.Manifest;
 import android.app.Activity;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
-
-
-import androidx.core.app.ActivityCompat;
 
 import com.bj.okhttp3.utils.ApiUtils;
 import com.bj.okhttp3.utils.MediaTypeUtils;
@@ -20,7 +14,6 @@ import com.bj.okhttp3.utils.PermissionUtils;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
