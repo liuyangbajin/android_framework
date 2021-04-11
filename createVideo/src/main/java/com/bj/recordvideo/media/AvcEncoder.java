@@ -72,16 +72,16 @@ public class AvcEncoder {
         }
 
 
-        MediaFormat mediaFormat = MediaFormat.createVideoFormat(MediaFormat.MIMETYPE_VIDEO_AVC, width, height);//COLOR_FormatYUV420SemiPlanar
+        MediaFormat mediaFormat = MediaFormat.createVideoFormat(MediaFormat.MIMETYPE_VIDEO_HEVC, width, height);//COLOR_FormatYUV420SemiPlanar
         mediaFormat.setInteger(MediaFormat.KEY_COLOR_FORMAT, colorFormat);
         mediaFormat.setInteger(MediaFormat.KEY_BIT_RATE, bitRate0);
         mediaFormat.setInteger(MediaFormat.KEY_FRAME_RATE, mFrameRate);
-        mediaFormat.setInteger(MediaFormat.KEY_I_FRAME_INTERVAL, 10);
+        mediaFormat.setInteger(MediaFormat.KEY_I_FRAME_INTERVAL, 1);
 
 //        对于planar的YUV格式，先连续存储所有像素点的Y，紧接着存储所有像素点的U，随后是所有像素点的V。
 //        对于packed的YUV格式，每个像素点的Y,U,V是连续交*存储的。
         try {
-            mediaCodec = MediaCodec.createEncoderByType(MediaFormat.MIMETYPE_VIDEO_AVC);
+            mediaCodec = MediaCodec.createEncoderByType(MediaFormat.MIMETYPE_VIDEO_HEVC);
             //创建生成MP4初始化对象
             mediaMuxer = new MediaMuxer(out.getAbsolutePath(), MediaMuxer.OutputFormat.MUXER_OUTPUT_MPEG_4);
         } catch (IOException e) {

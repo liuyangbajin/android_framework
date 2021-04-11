@@ -46,7 +46,7 @@ public class MainActivity extends Activity implements Processable {
             @Override
             public void run() {
                 super.run();
-                new AvcEncoder(new BitmapProvider(files), 16, new File(videoPath), 0, MainActivity.this).start();
+                new AvcEncoder(new BitmapProvider(files), 32, new File(videoPath), 0, MainActivity.this).start();
             }
         }.start();
     }
